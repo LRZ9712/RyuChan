@@ -1,7 +1,7 @@
 site:
   tab: potato
   title: potato
-  description: 🌸 轻盈、优雅、纯净 —— 用文字与图片记录生活与创意
+  description: 记点东西..
   language: zh
   favicon: /favicon.ico
   theme:
@@ -119,23 +119,22 @@ user:
   avatar: /profile.png
   sidebar:
     social:
-      - href: https://github.com/kobaridev
+      - href: https://qm.qq.com/q/p8dBHwS3pS
+        ariaLabel: QQ
+        title: QQ
+        svg: ri:qq-line
+      - href: https://qm.qq.com/q/b4OVMrSY4o
+        ariaLabel: WeChat
+        title: WeChat
+        svg: ri:wechat-fill
+      - href: https://github.com/LRZ9712
         ariaLabel: Github
         title: Github
         svg: ri:github-line
-      - href: https://space.bilibili.com/1536411565
-        ariaLabel: BiliBili
-        title: BiliBili
+      - href: https://www.bilibili.com/bangumi/play/ss28747?spm_id_from=333.337.0.0
+        title: Bilibili
+        ariaLabel: Bilibili
         svg: ri:bilibili-line
-      - href: >-
-          https://www.douyin.com/user/MS4wLjABAAAAeO0sqJYUgh1a26GkVPtS2yv_IOODjeqvtl4KSjvsntg?from_tab_name=main
-        ariaLabel: Douyin
-        title: Douyin
-        svg: ri:tiktok-line
-      - href: https://weibo.com/u/7579913510
-        title: Weibo
-        ariaLabel: Weibo
-        svg: ri:weibo-fill
   footer:
     social:
       - href: https://github.com/kobaridev
