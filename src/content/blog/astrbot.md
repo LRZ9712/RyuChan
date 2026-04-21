@@ -137,3 +137,35 @@ sudo ufw allow 6099
 ![local-image:ldldurm5](/images/astrbot/f4169e510fb16bf8.png)
 
 这三步做完不可能进不去。OK，部署正式完成，剩下的就只有在后台里的配置问题了！
+
+
+### 连接与登录 QQ
+
+这里以 QQ 平台为例其他平台自己摸索下
+
+打开qq后台：你的ip:6099    会出现token让你输入
+回到宝塔，点文件，点开这个文件就可以查看token，后续自己改掉
+![local-image:h0mrd1cm](/images/astrbot/b3b4be8fbe111b0d.png)
+![local-image:awiyhurm](/images/astrbot/9c3504aa00f2d58b.png)
+
+输入 Token 进入后台后，使用手机 QQ 扫码登录。支持与手机端同时在线。
+
+### 配置网络
+
+进去之后点网络配置。默认会有一个默认的在里边，按下边截图填写即可。如果没有默认的一个配置，新建一个即可,类型选择 **Websocket 客户端**。
+![local-image:qt3raslm](/images/astrbot/e92f053c62b65649.png)
+
+### 然后对接astrbot
+
+1. 打开 AstrBot 后台（`您的服务器IP:6185`），点击左侧菜单的“机器人”，选择 **OneBot** 协议。
+![local-image:znfzrx88](/images/astrbot/78da06f932735cc4.png)
+
+2. 按照下图填写
+![local-image:7me5pdbc](/images/astrbot/f18e17576699d28e.png)
+
+3. 填写完毕后，点击“保存”，对接完成
+
+### 检查运行状态
+
+可以点开日志查看是否有连接成功的提醒
+![local-image:mota92vy](/images/astrbot/5af22f599d2fc46d.png)
