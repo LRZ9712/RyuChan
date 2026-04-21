@@ -141,9 +141,8 @@ sudo ufw allow 6099
 
 ### 连接与登录 QQ
 
-这里以 QQ 平台为例其他平台自己摸索下
-
-打开qq后台：你的ip:6099    会出现token让你输入
+这里以 QQ 平台为例其他平台自己摸索下，打开napcat后台(`您的服务器IP:6099`)
+会出现token让你输入正确token
 回到宝塔，点文件，点开这个文件就可以查看token，后续自己改掉
 ![local-image:h0mrd1cm](/images/astrbot/b3b4be8fbe111b0d.png)
 ![local-image:awiyhurm](/images/astrbot/9c3504aa00f2d58b.png)
