@@ -1,13 +1,18 @@
 ---
 title: astrbot机器人部署教程
-description: ''
+description: 面向新手小白的astrbot部署教程
 pubDate: 2026-04-21T20:26
 image: /images/astrbot/d67e6db03124dabe.png
 draft: false
-tags: []
-categories: []
+tags:
+  - 机器人
+  - astrbot
+  - bot
+categories:
+  - 教程
+badge: ''
 ---
-这是一篇面向没有服务器与网络基础的新人小白教程。如果您已经有相关经验，建议直接阅读 [AstrBot 官方文档](https://github.com/AstrBotDevs/AstrBot)。
+这是一篇面向没有服务器与网络基础的新人小白教程。如果你已经有相关经验，建议直接阅读 [AstrBot 官方文档](https://github.com/AstrBotDevs/AstrBot)。
 
 ### 购买服务器
 
@@ -21,7 +26,7 @@ categories: []
 
 ### 连接 SSH
 
-购买完成后，进入服务器管理页面，找到您的服务器信息（如下图所示）。
+购买完成后，进入服务器管理页面，找到你的服务器信息（如下图所示）。
 ![local-image:bogmsuz0](/images/astrbot/b8b4b0ab6437a5bd.png)
 
 接着下载并安装 SSH 客户端工具：[SSH 工具下载地址](https://www.hostbuf.com/t/988.html)。
@@ -37,7 +42,7 @@ categories: []
 
 ### 安装宝塔面板
 
-新手都给我安装宝塔，可以避免很多麻烦，也可以更好的文件管理
+新手都给我安装宝塔，可以避免很多麻烦，也可以更好的文件管理。
 在 SSH 终端的输入框内粘贴以下命令并回车：
 
 ```bash
@@ -87,8 +92,8 @@ services:
     container_name: astrbot
     restart: always
     ports:
-      - "6185:6185"  # 原来的端口
-      - "9000-9050:9000-9050"  # 添加 8000-8050 端口范围映射
+      - "6185:6185" 
+      - "9000-9050:9000-9050"  # 添加 9000-9050 端口范围映射
     volumes:
       - ./data:/AstrBot/data
     networks:
@@ -97,7 +102,7 @@ services:
 networks:
   net_qq:
     driver: bridge
-    # 删除 ipam 配置，让 Docker 自动分配子网
+
 ```
 
 5. 在 `astrbot` 文件夹所在页面的上方，点击“终端”图标打开当前目录的命令行。
@@ -109,15 +114,15 @@ networks:
 docker compose up -d
 ```
 
-等待安装完成即可，这一步完了就已经彻底部署完成了！您的后台访问地址如下：
+等待安装完成即可，这一步完了就已经彻底部署完成了！你的后台访问地址如下：
 - QQ 后台：`你的服务器IP:6099`
 - AstrBot 后台：`你的服务器IP:6185`
 
 ### 配置防火墙放行
 
-如果您发现上面两个后台进不去，通常是因为防火墙没有放行相关端口。
+如果你发现上面两个后台进不去，通常是因为防火墙没有放行相关端口。
 
-首先，如果您使用的是腾讯云、阿里云等大厂云服务器，必须要在**云服务商的控制台后台**放行 `6185` 和 `6099` 端口（以腾讯云为例）：
+首先，如果你用的是腾讯云、阿里云等大厂云，必须在**云服务商的控制台后台**放行 `6185` 和 `6099` 端口（以腾讯云为例）：
 ![local-image:fw2gnedb](/images/astrbot/97b84907a21ed7b5.png)
 ![local-image:vwrp3pmc](/images/astrbot/cc2204f19f73a0c3.png)
 
