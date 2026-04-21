@@ -1,11 +1,14 @@
 ---
 title: Genie-TTS部署教程
-description: ''
+description: 折腾半天当时
 pubDate: 2026-04-19T18:56
 image: /images/tts/db6c793464de9f3b.png
 draft: false
-tags: [tts]
-categories: []
+tags:
+  - tts
+categories:
+  - 教程
+badge: ''
 ---
 
 ### 一、环境与依赖准备
