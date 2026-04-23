@@ -94,7 +94,7 @@ services:
     restart: always
     ports:
       - "6185:6185" 
-      - "9000-9050:9000-9050"  # 添加 9000-9050 端口范围映射
+      - "9000-9050:9000-9050"  # 这行是预留以后可能会用到端口，用不着可以删了
     volumes:
       - ./data:/AstrBot/data
     networks:
