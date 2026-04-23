@@ -60,6 +60,7 @@ wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh && sudo
 1. 在左侧菜单点击“docker”，点击安装。
 ![](/images/astrbot/6e294f6174cea74b.png)
 2. 打开“文件”，进入 `root` 文件夹，在里面创建一个名为 `astrbot` 的新文件夹。
+![](/images/astrbot/0a9e10254aad2205.png)
 3. 进入 `astrbot` 文件夹，新建一个文件并命名为 `docker-compose.yml`。
 ![](/images/astrbot/e43bfbb15f8a70e9.png)
 4. 双击打开 `docker-compose.yml`，将以下配置代码粘贴进去并保存。
