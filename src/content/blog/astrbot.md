@@ -2,7 +2,7 @@
 title: astrbot机器人部署教程
 description: 面向新手小白的astrbot部署教程
 pubDate: 2026-04-21T20:26
-image: /images/astrbot/d67e6db03124dabe.png
+image: /images/astrbot/557145b2f92edee4.png
 draft: false
 tags:
   - 机器人
