@@ -10,6 +10,7 @@ tags:
   - deepseek
 categories:
   - 教程
+badge: ''
 ---
 > 教程只面向小白，有基础的直接看作者项目地址：[https://github.com/CJackHwang/ds2api](https://github.com/CJackHwang/ds2api)
 
@@ -30,7 +31,7 @@ cp config.example.json config.json
 
 ### 3. 配置 docker-compose
 然后叉掉终端，回到 `ds2api` 文件夹内，新建文件命名为：`docker-compose.yml`
-
+![](/images/ds2api/f61749a54a9ff0fe.png)
 双击编辑刚新建的 `docker-compose.yml`，把下边内容复制进去保存：
 ```yaml
 services:
