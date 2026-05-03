@@ -2,7 +2,7 @@
 title: 部署逆向deepseek项目ds2api
 description: 逆向deepseek实现模型接口自由
 pubDate: 2026-05-03T17:32
-image: /images/ds2api/bfeb03003f67e508.png
+image: /images/ds2api/b87c62913ed7eb1d.jpg
 draft: false
 tags:
   - 逆向
