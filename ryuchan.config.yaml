@@ -30,8 +30,8 @@ site:
         - 🌿 记录生活的点滴，分享美好的瞬间！
         - 📚 纸上得来终觉浅，绝知此事要躬行！
     friend:
-      title: 友人帐
-      subtitle: 记录那些珍贵的友谊，分享彼此的故事
+      title: 土豆照片墙
+      subtitle: 可爱的土豆
     about:
       title: About Me
       subtitle: 一个热爱生活与技术的普通人！
@@ -85,7 +85,7 @@ site:
       svg: material-symbols:code-blocks-outline
       target: _self
     - id: friend
-      text: 友人帐
+      text: 土豆照片墙
       href: /friend
       svg: material-symbols:supervisor-account-outline-rounded
       target: _self
