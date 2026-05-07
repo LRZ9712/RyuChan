@@ -61,7 +61,7 @@ site:
     - id: friend
       text: 土豆照片墙
       href: /friend
-      svg: material-symbols:supervisor-account-outline-rounded
+      svg: material-symbols:pets-outline-rounded
       target: _self
     - id: project
       text: 项目
