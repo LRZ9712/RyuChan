@@ -1,0 +1,23 @@
+---
+---
+
+<div class="twikoo-wrapper bg-base-100 rounded-3xl p-6 md:p-8 shadow-sm mt-8 transition-all duration-300">
+  <div id="tcomment"></div>
+</div>
+
+<script is:inline src="https://cdn.staticfile.net/twikoo/1.6.39/twikoo.all.min.js"></script>
+
+<script is:inline>
+  function initTwikoo() {
+    if (typeof twikoo !== 'undefined') {
+      twikoo.init({
+        // 注意：把下面这个链接换成你服务器宝塔部署的真实后端链接！
+        envId: 'https://liuyan.tudouu.cn', 
+        el: '#tcomment',
+        path: window.location.pathname,
+      });
+    }
+  }
+
+  document.addEventListener('astro:page-load', initTwikoo);
+</script>
