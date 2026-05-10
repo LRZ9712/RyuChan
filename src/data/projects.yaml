@@ -1,33 +1,25 @@
-- name: HomePage
-  avatar: https://img.131714.xyz/file/Avatar/1753366550828_avatar1.jpg
-  description: 🏠 小张的个人主页！
-  url: https://131714.xyz
+- name: potatoTV
+  avatar: https://pic1.imgdb.cn/item/69ff20e28a9a8c274c5c124c.gif
+  description: 看电影的，可换源，片源很全，短视频都有
+  url: https://tv.tudouu.cn
   year: 2025
   tags:
     - Web
-  badge: Profile
-- name: Blog
-  avatar: https://blog.131714.xyz/images/avatar.png
-  description: 个人Blog，发布文章~ (ﾉ>ω<)ﾉ
-  url: https://hub.131714.xyz
+  badge: web
+- name: memers
+  avatar: https://pic1.imgdb.cn/item/69692124f325a9a475df3650.png
+  description: 梗图生成器，挺好玩的
+  url: https://memers.tudouu.cn
   year: 2025
   tags:
     - 自用
-  badge: Blog
-- name: ImgBed
-  avatar: https://img.131714.xyz/file/Avatar/1753366548855_avatar3.jpg
-  description: 🌄 Cloudflare-ImgBed + Telegram实现的无限存储图床~
-  url: https://img.131714.xyz
+  badge: web
+- name: 去水印
+  avatar: https://cdn.jsdelivr.net/gh/5ime/img/avatar.jpg
+  description: 短视频解析去水印，图片视频都支持
+  url: https://jx.tudouu.cn
   year: 2025
   tags:
     - Cloudflare
     - Telegram
-  badge: ImgBed
-- name: OpenList
-  avatar: https://img.131714.xyz/file/Avatar/1753366556506_avatar4.jpg
-  description: ✨ 网盘挂载器~当然也可以添加本机的存储哇 (≧∇≦)ﾉ
-  url: https://openlist.131714.xyz
-  year: 2025
-  tags:
-    - 网盘聚合
-  badge: Storage
+  badge: web
