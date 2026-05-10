@@ -71,7 +71,7 @@ site:
     - id: navigation
       text: 留言板
       href: /navigation
-      svg: material-symbols:explore-outline
+      svg: material-symbols:forum-outline-rounded
       target: _self      
     - id: about
       text: 关于
