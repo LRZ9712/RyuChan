@@ -38,11 +38,10 @@ const bannerSubtitle = pageConfig?.subtitle || "";
 ---
 
 <!doctype html>
+<!-- 移除了 data-theme 和 data-theme-type，由下方 JS 动态赋予，防止闪屏 -->
 <html
   lang={SITE_LANGUAGE}
   style="background-color: var(--custom-page-bg)"
-  data-theme={SITE_THEME.light}
-  data-theme-type="light"
 >
   <head>
     <ClientRouter />
@@ -89,39 +88,47 @@ const bannerSubtitle = pageConfig?.subtitle || "";
       })(window, document, "clarity", "script", "skz108rus8");
     </script>
 
-    <!-- 主题管理脚本 -->
+    <!-- 主题管理脚本 (包含随机主题逻辑) -->
     <script define:vars={{ SITE_THEME }} is:inline>
       (function () {
         const storedTheme = localStorage.getItem("theme");
         const storedBannerMode = localStorage.getItem("banner-mode") || "normal";
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         
         let theme;
         if (storedTheme) {
+          // 用户之前有存储的主题，直接使用
           theme = storedTheme;
         } else {
-          theme = SITE_THEME.light;
+          // 用户第一次进入，随机分配主题
+          const availableThemes = [
+            "retro", "light", "dark", "cupcake", "bumblebee", 
+            "emerald", "corporate", "synthwave", "cyberpunk", "valentine"
+          ];
+          const randomIndex = Math.floor(Math.random() * availableThemes.length);
+          theme = availableThemes[randomIndex];
+          
+          // 将随机结果存下来，这样刷新不会一直变
           localStorage.setItem("theme", theme);
         }
+        
         document.documentElement.setAttribute("data-theme", theme);
         document.documentElement.setAttribute("data-banner-mode", storedBannerMode);
         
         const isDark = theme === SITE_THEME.dark || ['dark', 'synthwave', 'halloween', 'forest', 'black', 'luxury', 'dracula', 'business', 'night', 'coffee'].includes(theme);
         const themeType = isDark ? "dark" : "light";
         document.documentElement.setAttribute("data-theme-type", themeType);
+
+        // 系统主题变化监听器
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", (e) => {
-            if (!localStorage.getItem("theme")) {
+            // 只有当用户没有明确自己选过主题时才自动随系统切换
+            if (!localStorage.getItem("user-selected-theme")) {
               const newTheme = e.matches ? SITE_THEME.dark : SITE_THEME.light;
               document.documentElement.setAttribute("data-theme", newTheme);
               const newThemeType = e.matches ? "dark" : "light";
-              document.documentElement.setAttribute(
-                "data-theme-type",
-                newThemeType,
-              );
+              document.documentElement.setAttribute("data-theme-type", newThemeType);
               localStorage.setItem("theme", newTheme);
             }
           });
@@ -159,11 +166,10 @@ const bannerSubtitle = pageConfig?.subtitle || "";
       </div>
     </div>
 
-
     <MobileTOC headings={headings} showTOC={showTOC} />
     <GlobalAudio />
 
-    <!-- 其余脚本保持不变 -->
+    <!-- 路由切换后的主题保持脚本 -->
     <script define:vars={{ SITE_THEME }} is:inline>
       document.addEventListener("astro:after-swap", () => {
         const storedTheme = localStorage.getItem("theme");
@@ -180,6 +186,7 @@ const bannerSubtitle = pageConfig?.subtitle || "";
       });
     </script>
 
+    <!-- 代码块复制功能 -->
     <script is:inline>
       document.addEventListener("astro:page-load", () => {
         document.querySelectorAll(".btn-copy").forEach((button) => {
@@ -218,7 +225,7 @@ const bannerSubtitle = pageConfig?.subtitle || "";
       .copy-success {
         animation: pulse 0.5s ease-in-out;
       }
-  .ryuchan-code-toolbar-copy-success svg {
+      .ryuchan-code-toolbar-copy-success svg {
         color: #10b981;
       }
       @keyframes pulse {
