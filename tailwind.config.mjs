@@ -38,7 +38,19 @@ export default {
   ],
   plugins: [daisyUI, typography, addDynamicIconSelectors(), tailwindcssAnimate],
   daisyui: {
-    themes: true, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+    // 这里将 true 修改为数组，并将 retro 放在第一位
+    themes: [
+      "retro",
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "cyberpunk",
+      "valentine"
+    ],
     darkTheme: SITE_THEME.dark, // name of one of the included themes for dark mode
     logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
   },
