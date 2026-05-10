@@ -38,10 +38,11 @@ const bannerSubtitle = pageConfig?.subtitle || "";
 ---
 
 <!doctype html>
-<!-- 移除了 data-theme 和 data-theme-type，由下方 JS 动态赋予，防止闪屏 -->
 <html
   lang={SITE_LANGUAGE}
   style="background-color: var(--custom-page-bg)"
+  data-theme="retro"
+  data-theme-type="light"
 >
   <head>
     <ClientRouter />
@@ -88,7 +89,7 @@ const bannerSubtitle = pageConfig?.subtitle || "";
       })(window, document, "clarity", "script", "skz108rus8");
     </script>
 
-    <!-- 主题管理脚本 (包含随机主题逻辑) -->
+    <!-- 主题管理脚本 (固定首选 Retro 逻辑) -->
     <script define:vars={{ SITE_THEME }} is:inline>
       (function () {
         const storedTheme = localStorage.getItem("theme");
@@ -97,18 +98,11 @@ const bannerSubtitle = pageConfig?.subtitle || "";
         
         let theme;
         if (storedTheme) {
-          // 用户之前有存储的主题，直接使用
+          // 如果用户之前已经手动选过主题，则尊重用户的选择
           theme = storedTheme;
         } else {
-          // 用户第一次进入，随机分配主题
-          const availableThemes = [
-            "retro", "light", "dark", "cupcake", "bumblebee", 
-            "emerald", "corporate", "synthwave", "cyberpunk", "valentine"
-          ];
-          const randomIndex = Math.floor(Math.random() * availableThemes.length);
-          theme = availableThemes[randomIndex];
-          
-          // 将随机结果存下来，这样刷新不会一直变
+          // 如果用户是第一次来，强制默认固定为 retro 主题！
+          theme = "retro";
           localStorage.setItem("theme", theme);
         }
         
@@ -119,13 +113,13 @@ const bannerSubtitle = pageConfig?.subtitle || "";
         const themeType = isDark ? "dark" : "light";
         document.documentElement.setAttribute("data-theme-type", themeType);
 
-        // 系统主题变化监听器
+        // 监听系统深浅色切换
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", (e) => {
-            // 只有当用户没有明确自己选过主题时才自动随系统切换
+            // 如果用户从来没自己存过主题，才跟随系统切换
             if (!localStorage.getItem("user-selected-theme")) {
-              const newTheme = e.matches ? SITE_THEME.dark : SITE_THEME.light;
+              const newTheme = e.matches ? SITE_THEME.dark : "retro";
               document.documentElement.setAttribute("data-theme", newTheme);
               const newThemeType = e.matches ? "dark" : "light";
               document.documentElement.setAttribute("data-theme-type", newThemeType);
@@ -136,7 +130,6 @@ const bannerSubtitle = pageConfig?.subtitle || "";
     </script>
   </head>
 
-  <!-- 移除上边距，让Banner从顶部开始 -->
   <body
     class="flex flex-col min-h-screen bg-[var(--banner-wave-bg)]"
     {...isIndexed ? { "data-pagefind-body": true } : {}}
