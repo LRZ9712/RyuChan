@@ -69,7 +69,7 @@ site:
       svg: material-symbols:code-blocks-outline
       target: _self
     - id: navigation
-      text: 导航
+      text: 留言板
       href: /navigation
       svg: material-symbols:explore-outline
       target: _self      
