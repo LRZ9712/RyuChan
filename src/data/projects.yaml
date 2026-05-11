@@ -23,3 +23,12 @@
     - Cloudflare
     - Telegram
   badge: web
+- name: 视频图集去水印
+  avatar: /images/projects/avatar-3.png
+  description: 全网短视频图集解析去水印，不支持live实况解析，只能输出图片
+  url: https://www.icloud.com/shortcuts/36ca57b290254845a046f1165c33d64b
+  year: 2026
+  tags: []
+  github: ''
+  npm: ''
+  badge: ios-快捷指令
