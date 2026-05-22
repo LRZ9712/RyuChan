@@ -8,7 +8,9 @@ tags:
   - 签到
   - new-api
   - 公益站
-categories: []
+categories:
+  - 我的项目
+badge: ''
 ---
 #公益站老是忘记签到，就让ai写的，颜值还不错
 
