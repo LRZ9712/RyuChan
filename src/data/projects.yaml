@@ -32,3 +32,12 @@
   github: ''
   npm: ''
   badge: ios-快捷指令
+- name: 视频加密/解密
+  avatar: /images/projects/avatar-4.png
+  description: 发涩涩视频用的，可以躲避平台稽查和举报，因为不解密看不出来是啥东西
+  url: https://www.icloud.com/shortcuts/1d84eb73e1c3455eba3953f8d38be37f
+  year: 2026
+  tags: []
+  github: ''
+  npm: ''
+  badge: ios-快捷指令
