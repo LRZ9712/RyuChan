@@ -26,7 +26,7 @@
 - name: 视频图集去水印
   avatar: /images/projects/avatar-3.png
   description: 全网短视频图集解析去水印，不支持live实况解析，只能输出图片
-  url: https://www.icloud.com/shortcuts/36ca57b290254845a046f1165c33d64b
+  url: https://www.icloud.com/shortcuts/7d04fc485c7441e4881a7cda665a5341
   year: 2026
   tags: []
   github: ''
@@ -41,3 +41,12 @@
   github: ''
   npm: ''
   badge: ios-快捷指令
+- name: gpt绘图面板
+  avatar: /images/projects/avatar-5.png
+  description: 生图面板，需要自己填入api
+  url: https://gpt.tudouu.cn/
+  year: 2026
+  tags: []
+  github: ''
+  npm: ''
+  badge: web
